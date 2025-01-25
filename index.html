@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEVENTEEN Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random SEVENTEEN Fact</h1>
+        <p id="factDisplay">Click the button to see a fact!</p>
+        <button id="factButton">Show Random Fact</button>
+    </div>
+    <script>
+        const facts = [
+            {
+                "fact": "Formation",
+                "description": "SEVENTEEN was formed by Pledis Entertainment in 2015 and consists of 13 members."
+            },
+            {
+                "fact": "Sub-Units",
+                "description": "The group is divided into three sub-units: the Hip-Hop Unit, the Vocal Unit, and the Performance Unit, allowing members to showcase their diverse talents."
+            },
+            {
+                "fact": "Self-Producing",
+                "description": "SEVENTEEN is known for being a self-producing idol group, with members actively involved in writing and composing their music."
+            },
+            {
+                "fact": "Debut Album",
+                "description": "Their debut extended play (EP), '17 Carat,' was released in May 2015 and quickly gained popularity."
+            },
+            {
+                "fact": "Fanbase",
+                "description": "SEVENTEEN's official fan club is called 'Carat,' symbolizing the group's commitment to their fans."
+            },
+            {
+                "fact": "Choreography",
+                "description": "The group is renowned for its intricate choreography and synchronized dance performances, often incorporating formations and transitions."
+            },
+            {
+                "fact": "Record-Breaking",
+                "description": "SEVENTEEN has set multiple records on various music charts, including Billboard and Gaon, for their album sales and streaming numbers."
+            },
+            {
+                "fact": "Diverse Music Styles",
+                "description": "Their music spans various genres, including pop, hip-hop, R&B, and EDM, showcasing their versatility."
+            },
+            {
+                "fact": "International Tours",
+                "description": "SEVENTEEN has embarked on several world tours, performing in countries across Asia, North America, and Europe."
+            },
+            {
+                "fact": "Reality Show",
+                "description": "They gained initial fame through the reality show 'SEVENTEEN TV,' which documented their training and preparation for debut."
+            },
+            {
+                "fact": "Awards",
+                "description": "SEVENTEEN has received numerous awards, including the 'Best New Artist' award at the 2015 Mnet Asian Music Awards (MAMA)."
+            },
+            {
+                "fact": "Album Sales",
+                "description": "Their albums consistently achieve high sales figures, with several albums surpassing a million copies sold."
+            },
+            {
+                "fact": "Collaborations",
+                "description": "SEVENTEEN has collaborated with various artists, including popular K-pop groups and international musicians."
+            },
+            {
+                "fact": "Social Media Presence",
+                "description": "The group actively engages with fans through social media platforms, sharing updates, behind-the-scenes content, and personal messages."
+            },
+            {
+                "fact": "Variety Shows",
+                "description": "Members frequently appear on variety shows, showcasing their personalities and humor, which endears them to fans."
+            },
+            {
+                "fact": "Philanthropy",
+                "description": "SEVENTEEN has participated in various charitable activities, including donations to support education and disaster relief efforts."
+            },
+            {
+                "fact": "Merchandising",
+                "description": "The group has a wide range of merchandise, including albums, clothing, and lightsticks, which are popular among fans."
+            },
+            {
+                "fact": "Concepts",
+                "description": "SEVENTEEN often explores different concepts and themes in their music videos and performances, keeping their content fresh and engaging."
+            },
+            {
+                "fact": "Member Roles",
+                "description": "Each member has a specific role within the group, including vocalists, rappers, dancers, and leaders, contributing to their overall dynamic."
+            },
+            {
+                "fact": "Cultural Impact",
+                "description": "SEVENTEEN has played a significant role in the global spread of K-pop, contributing to the genre's popularity outside of South Korea."
+            }
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const randomFact = facts[randomIndex];
+            document.getElementById('factDisplay').innerText = `${randomFact.fact}: ${randomFact.description}`;
+        });
+    </script>
+</body>
+</html>
